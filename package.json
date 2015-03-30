@@ -4,7 +4,7 @@
   "description": "Unofficial Google Sheets node API",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine --help"
   },
   "keywords": [
     "google",
@@ -17,15 +17,19 @@
   "author": "SC5",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "http://github.com/SC5/google-sheets-api.git"
+    "type": "git",
+    "url": "http://github.com/SC5/google-sheets-api.git"
   },
   "bugs": {
-    "url" : "https://github.com/SC5/google-sheets-api/issues"
+    "url": "https://github.com/SC5/google-sheets-api/issues"
   },
   "dependencies": {
     "bluebird": "^2.9.14",
     "request": "^2.54.0",
     "googleapis": "^2.0.2"
+  },
+  "devDependencies": {
+    "jasmine": "^2.2.1",
+    "proxyquire": "^1.4.0"
   }
 }
