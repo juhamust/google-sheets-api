@@ -30,17 +30,22 @@ describe('Sheets', function() {
     }
   });
 
+  var sheets = new Sheets({
+    email: 'test@company.com',
+    key: 'testkey'
+  });
 
-  it('should run', function(done) {
-    var sheets = new Sheets({
-      email: 'test@company.com',
-      key: 'testkey'
-    });
 
+  it('should get cells', function(done) {
     sheets.get()
-    .then(function(){
+    .then(function(cells){
+      expect(cells.length).toBe(6);
       done();
     });
+  });
+
+  it('should parse range', function() {
+    sheets.parseRangeInfo('A1:B2');
   });
 
 });
